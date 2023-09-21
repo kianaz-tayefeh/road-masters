@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { PAGINATION_LIMIT, PAGINATION_TOTAL_PAGE } from "~/constants/options";
 
 //the api has to return totalPage inside the pagination attribute of the response

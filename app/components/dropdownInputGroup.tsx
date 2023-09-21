@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown } from "./dropdown";
+import { Dropdown } from "./Dropdown";
 import type { SelectOptionType } from "~/constants/options";
 
 interface DropdownInputGroupProps {
@@ -12,7 +12,6 @@ interface DropdownInputGroupProps {
 
 export const DropdownInputGroup: React.FC<DropdownInputGroupProps> = ({
   label,
-  name,
   options,
   primaryPlaceholder,
   secondaryPlaceholder,
@@ -22,7 +21,7 @@ export const DropdownInputGroup: React.FC<DropdownInputGroupProps> = ({
       <label htmlFor={label} className="form-label">
         {label}
       </label>
-      <div className="row-cols-2 input-group mb-3">
+      <div className="input-group mb-2">
         <Dropdown options={options} placeholder={primaryPlaceholder} />
         <Dropdown options={options} placeholder={secondaryPlaceholder} />
       </div>

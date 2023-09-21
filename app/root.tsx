@@ -8,23 +8,23 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/custom-bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./style2/custom-bootstrap.css";
 // import "./styles/bootstrap-breakpoint.scss";
-// import bootstrapStylesheetUrl from "~/styles/bootstrap-breakpoint.css";
+import bootstrapStylesheetUrl from "~/styles/bootstrap-breakpoint.css";
 import { useEffect } from "react";
 
-export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-];
+// export const links: LinksFunction = () => [
+//   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+// ];
 
-// export const links: LinksFunction = () => {
-//   return [
-// { rel: "stylesheet", href: "/fonts/nunito-sans/font.css" },
-// { rel: "stylesheet", href: bootstrapStylesheetUrl },
-// cssBundleHref ? { rel: "stylesheet", href: cssBundleHref } : [],
-//   ];
-// };
+export const links: LinksFunction = () => {
+  return [
+    // { rel: "stylesheet", href: "/fonts/nunito-sans/font.css" },
+    { rel: "stylesheet", href: bootstrapStylesheetUrl },
+    // cssBundleHref ? { rel: "stylesheet", href: cssBundleHref } : [],
+  ];
+};
 
 export default function App() {
   useEffect(() => {

@@ -1,17 +1,10 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
-import { CarsFilter } from "~/components/carsFilter";
-import { Header } from "~/components/header";
-import { useSearchParams } from "react-router-dom";
-import { HeaderImage } from "~/components/headerImage";
-import {
-  Form,
-  Outlet,
-  useActionData,
-  useLoaderData,
-  useSubmit,
-} from "@remix-run/react";
+import { CarFilter } from "~/components/CarFilter";
+import { Header } from "~/components/Header";
+import { HeaderImage } from "~/components/HeaderImage";
+import { Form, Outlet, useLoaderData, useSubmit } from "@remix-run/react";
 import type { ICarData } from "~/interfaces/ICarData";
-import { CarCard } from "~/components/car-card";
+import { CarCard } from "~/components/CarCard";
 import Footer from "~/components/Footer";
 import { getCarListItems } from "~/models/car-client";
 import Pagination from "~/components/Pagination";
@@ -42,6 +35,7 @@ export default function CarsRoute() {
 
   const submitForm = useCallback(() => {
     submit(formRef.current, { replace: true });
+    formRef.current.scrollIntoView({ behavior: "smooth" });
   }, [submit]);
 
   useEffect(() => {
@@ -51,12 +45,12 @@ export default function CarsRoute() {
       return;
     }
     submitForm();
-    formRef.current.scrollIntoView({ behavior: "smooth" });
   }, [currentPage, submitForm]);
 
   // to make sure after user change the filters we will get back to page 1
   const handleResetPagination = useCallback(() => {
     setCurrentPage(1);
+    submitForm();
   }, []);
 
   return (
@@ -66,12 +60,15 @@ export default function CarsRoute() {
         <HeaderImage />
       </div>
       <Form method="get" onChange={handleResetPagination} ref={formRef}>
-        <div className="container-fluid mt-8rem">
+        <div className="container-fluid ">
+          {/* <a className="btn btn-danger p-10" role="button" href="#">
+            CHangeeee
+          </a> */}
           <div className="row">
             <div className="col-lg-4 col-md-6">
-              <CarsFilter />
+              <CarFilter />
             </div>
-            <div className="col-lg-8 col-md-6">
+            <div className="col-lg-8 col-md-6 mt-10">
               {!cars.length && (
                 <div className="alert alert-warning" role="alert">
                   No Data Found Please Change The Filters!

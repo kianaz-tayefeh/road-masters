@@ -66,7 +66,7 @@ export const COLOR_OPTIONS: SelectOptionType[] = [
 ];
 
 export const MODEL_OPTIONS: SelectOptionType[] = [
-  { value: "", label: "select an option" },
+  { value: "", label: "Select a model" },
   { value: "i10 Magna 1.2 Kappa2", label: "i10 Magna 1.2 Kappa2" },
   { value: "Glanza G", label: "Glanza G" },
   { value: "Elite i20 Sportz 1.2", label: "Elite i20 Sportz 1.2" },
@@ -76,7 +76,7 @@ export const MODEL_OPTIONS: SelectOptionType[] = [
 ];
 
 export const MAKE_OPTIONS: SelectOptionType[] = [
-  { value: "", label: "select an option" },
+  { value: "", label: "Select an brand" },
   { value: "Toyota", label: "Toyota" },
   { value: "BMW", label: "BMW" },
   { value: "Maruti Suzuki", label: "Maruti Suzuki" },
