@@ -59,19 +59,21 @@ export default function CarsRoute() {
         <Header />
         <HeaderImage />
       </div>
-      <Form method="get" onChange={handleResetPagination} ref={formRef}>
+      <Form
+        method="get"
+        onChange={handleResetPagination}
+        ref={formRef}
+        id="form"
+      >
         <div className="container-fluid ">
-          {/* <a className="btn btn-danger p-10" role="button" href="#">
-            CHangeeee
-          </a> */}
           <div className="row">
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6 col-sm-12 ">
               <CarFilter />
             </div>
-            <div className="col-lg-8 col-md-6 mt-10">
+            <div className="col-lg-8 col-md-6 col-sm-12  mt-lg-10 mt-5 ">
               {!cars.length && (
-                <div className="alert alert-warning" role="alert">
-                  No Data Found Please Change The Filters!
+                <div className="alert alert-secondary" role="alert">
+                  No Data Found Please Change Brand or Model!
                 </div>
               )}
               {cars.map((car, index) => (
@@ -89,11 +91,7 @@ export default function CarsRoute() {
             </div>
           </div>
         </div>
-        <Pagination
-          totalPages={5}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </Form>
       <div className="d-flex">
         <Footer />

@@ -20,6 +20,46 @@
   }
 }
 
+.header-img {
+  min-height: 300px;
+}
+
+@media (max-width: 34em) {
+  .card-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .card-text {
+    min-width: 350px;
+    font-size: 14px;
+  }
+}
+
+.dropdown .dropdown-toggle::after {
+  display: none;
+}
+.dropdown .dropdown-menu {
+  border-top: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  max-height: 280px;
+  overflow-y: scroll;
+}
+.dropdown .rounded-right {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.dropdown .rounded-left {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.input-group .dropdown {
+  width: 50%;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -14663,20 +14703,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-.dropdown-toggle::after {
-  display: none;
-}
-
-.dropdown-menu {
-  border-top: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  max-height: 280px;
-  overflow-y: scroll;
-}
-
-.dropdown-menu::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
 }/*# sourceMappingURL=bootstrap-breakpoint.css.map */

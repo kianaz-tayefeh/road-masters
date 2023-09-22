@@ -2,13 +2,13 @@ import React from "react";
 import { Dropdown } from "./Dropdown";
 import type { SelectOptionType } from "~/constants/options";
 
-interface DropdownInputGroupProps {
+type DropdownInputGroupProps = {
   label: string;
   name?: string;
   options: SelectOptionType[];
   primaryPlaceholder: string;
   secondaryPlaceholder: string;
-}
+};
 
 export const DropdownInputGroup: React.FC<DropdownInputGroupProps> = ({
   label,
@@ -21,9 +21,17 @@ export const DropdownInputGroup: React.FC<DropdownInputGroupProps> = ({
       <label htmlFor={label} className="form-label">
         {label}
       </label>
-      <div className="input-group mb-2">
-        <Dropdown options={options} placeholder={primaryPlaceholder} />
-        <Dropdown options={options} placeholder={secondaryPlaceholder} />
+      <div className="input-group">
+        <Dropdown
+          options={options}
+          placeholder={primaryPlaceholder}
+          className="rounded-right"
+        />
+        <Dropdown
+          options={options}
+          placeholder={secondaryPlaceholder}
+          className="rounded-left"
+        />
       </div>
     </div>
   );

@@ -64,38 +64,54 @@ $font-sizes: map-merge($font-sizes, $custom-font-sizes);
   }
 }
 
+.header-img {
+  min-height: 300px;
+}
+
+.card-title {
+  @media (max-width: 34em) {
+    font-size: 2rem;
+  }
+}
+.card-text {
+  @media (max-width: 34em) {
+    min-width: 350px;
+    font-size: 14px;
+  }
+}
+
+.dropdown {
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown-menu {
+    border-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    max-height: 280px;
+    overflow-y: scroll;
+  }
+
+  .rounded-right {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .rounded-left {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+}
+
+.input-group {
+  .dropdown {
+    width: 50%;
+  }
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/mixins";
-
-.dropdown-toggle::after {
-  display: none;
-}
-
-.dropdown-menu {
-  border-top: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  max-height: 280px;
-  overflow-y: scroll;
-}
-
-.dropdown-menu::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
-// .rounded-right {
-//   border-top-right-radius: 0 !important;
-//   border-bottom-right-radius: 0 !important;
-// }
-
-// .rounded-left {
-//   border-top-left-radius: 0 !important;
-//   border-bottom-left-radius: 0 !important;
-// }
-// .border-gray {
-//   border-color: #f4f4f4 !important;
-// }

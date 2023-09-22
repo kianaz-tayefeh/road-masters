@@ -1,12 +1,12 @@
-import { AutoCarIcon } from "./icons/AutoCarIcon";
+import { AutoCarLogo } from "./icons/AutoCarLogo";
 import { ProfileIcon } from "./icons/ProfileIcon";
 
 export const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light  px-9">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light py-lg-0 px-lg-9 px-sm-1 ">
       <div className="container-fluid">
-        <a href="/" className="navbar-brand me-5" id="logo">
-          <AutoCarIcon />
+        <a href="/" className="navbar-brand me-lg-5" id="logo">
+          <AutoCarLogo />
         </a>
         <button
           className="navbar-toggler"
@@ -24,35 +24,35 @@ export const Header = () => {
           <ul className="navbar-nav me-auto gap-5 ">
             <li className="nav-item">
               <a
-                href="#"
-                className="nav-link active border-bottom border-2 border-danger"
+                href="/"
+                className="nav-link py-2 active border-bottom border-2 border-danger"
                 aria-current="page"
               >
                 New cars
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link ">
+            <li className="nav-item ">
+              <a href="#" className="nav-link py-2">
                 Used cars
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-dark ">
+              <a href="#" className="nav-link text-dark py-2">
                 About us
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-dark ">
+              <a href="#" className="nav-link text-dark py-2">
                 Contact
               </a>
             </li>
           </ul>
-          <div className="d-flex align-items-center gap-4 ">
-            <a type="button" href="/" className="btn btn-danger ">
-              Find your car s
-            </a>
-            <ProfileIcon />
-          </div>
+        </div>
+        <div className="d-none d-lg-flex align-items-center gap-4 ">
+          <a type="button" href="/" className="btn btn-danger text-white ">
+            Find your car
+          </a>
+          <ProfileIcon />
         </div>
       </div>
     </nav>

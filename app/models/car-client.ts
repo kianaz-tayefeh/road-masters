@@ -1,6 +1,6 @@
 import { getCars } from "~/apis/car";
 
-export async function getCarListItems(carFilters) {
+export async function getCarListItems(carFilters: any) {
   try {
     const response = await getCars(carFilters);
 
