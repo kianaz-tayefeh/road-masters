@@ -11,11 +11,7 @@ Displaying Car Data with Filtering and Pagination
 
 #### Clone the repository
 
-git clone https://github.com/your-username/your-project.git
-
-#### Change into the project directory
-
-cd your-project
+git clone https://github.com/kianaz-tayefeh/road-masters
 
 #### Install dependencies
 
