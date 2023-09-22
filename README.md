@@ -1,6 +1,5 @@
 ## Road-Masters
 
-**Project Description**
 Displaying Car Data with Filtering and Pagination
 
 - Remix-run
